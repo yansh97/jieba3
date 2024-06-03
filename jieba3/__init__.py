@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from jieba3.tok import _cut_query, _cut_text
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 class jieba3(BaseModel):
