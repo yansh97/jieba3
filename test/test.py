@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Callable
 
 import jieba
+
 import jieba3
 
 jieba.initialize()
@@ -30,7 +31,7 @@ def test_mode(
     jieba_total_time: float = 0
     jieba3_total_time: float = 0
     size: float = path.stat().st_size / 1024 / 1024
-    lines: list[str] = path.read_text().splitlines()
+    lines: list[str] = path.read_text(encoding="utf-8").splitlines()
     N = 10
     for _ in range(N):
         for line in lines:

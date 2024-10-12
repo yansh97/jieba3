@@ -23,19 +23,19 @@ class ModelParams(BaseModel):
 
 
 BASE_MODEL_PARAMS: Final[ModelParams] = ModelParams.model_validate_json(
-    json_data=(Path(__file__).parent / "model.base.json").read_text()
+    json_data=(Path(__file__).parent / "model.base.json").read_text(encoding="utf-8")
 )
 BASE_MODEL_FREQ: Final[dict[str, int]] = BASE_MODEL_PARAMS.freq
 BASE_MODEL_TOTAL: Final[int] = BASE_MODEL_PARAMS.total
 
 SMALL_MODEL_PARAMS: Final[ModelParams] = ModelParams.model_validate_json(
-    json_data=(Path(__file__).parent / "model.small.json").read_text()
+    json_data=(Path(__file__).parent / "model.small.json").read_text(encoding="utf-8")
 )
 SMALL_MODEL_FREQ: Final[dict[str, int]] = SMALL_MODEL_PARAMS.freq
 SMALL_MODEL_TOTAL: Final[int] = SMALL_MODEL_PARAMS.total
 
 LARGE_MODEL_PARAMS: Final[ModelParams] = ModelParams.model_validate_json(
-    json_data=(Path(__file__).parent / "model.large.json").read_text()
+    json_data=(Path(__file__).parent / "model.large.json").read_text(encoding="utf-8")
 )
 LARGE_MODEL_FREQ: Final[dict[str, int]] = LARGE_MODEL_PARAMS.freq
 LARGE_MODEL_TOTAL: Final[int] = LARGE_MODEL_PARAMS.total
@@ -53,7 +53,7 @@ class HMMParams(BaseModel):
 
 
 HMM_PARAMS: Final[HMMParams] = HMMParams.model_validate_json(
-    json_data=(Path(__file__).parent / "hmm.json").read_text()
+    json_data=(Path(__file__).parent / "hmm.json").read_text(encoding="utf-8")
 )
 
 HMM_STATE_PROB: Final[dict[State, float]] = HMM_PARAMS.state_prob
