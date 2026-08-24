@@ -1,3 +1,5 @@
+
+
 # jieba3
 
 “结巴 3”中文分词：做最好的 Modern Python 3 中文分词组件
@@ -12,7 +14,7 @@ jieba3 是 [jieba](https://github.com/fxsjy/jieba) 分词模块的 Modern Python
 
 # 安装说明
 
-jieba3 仅支持 Python 3.10+ 版本
+jieba3 仅支持 Python 3.10+ 版本，并依赖 `pydantic`
 
 ```bash
 pip install jieba3
