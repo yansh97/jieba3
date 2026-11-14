@@ -1,25 +1,23 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
 [project]
-dynamic = ["version", "description"]
 name = "jieba3"
+version = "1.1.0"
+description = "“结巴 3”中文分词：做最好的 Modern Python 3 中文分词组件"
 readme = "README.md"
-requires-python = ">=3.10,<4"
+requires-python = ">=3.8"
 license = { file = "LICENSE" }
 authors = [{ name = "Shihong Yan", email = "yansh97@foxmail.com" }]
 keywords = ["Chinese", "NLP", "Analysis", "Tokenizer"]
-dependencies = ["pydantic"]
-
-[project.optional-dependencies]
-dev = ["isort", "black", "flit"]
+dependencies = []
 
 [project.urls]
 Home = "https://github.com/yansh97/jieba3"
 
-[tool.flit.sdist]
-exclude = ["**/.DS_Store"]
+[dependency-groups]
+dev = ["jieba>=0.42.1", "ruff>=0.17.5", "ty>=0.0.104"]
 
-[tool.isort]
-profile = 'black'
+[build-system]
+requires = ["uv_build>=0.13.7"]
+build-backend = "uv_build"
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
